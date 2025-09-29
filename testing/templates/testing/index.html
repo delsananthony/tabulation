@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Testing</title>
+        <link rel="stylesheet" href="{% static 'src/css/bootstrap.min.css' %}">
+    </head>
+    <body>
+        <h1 class="text-center">Testing Page</h1>
+
+
+        <button id="myButton" class="btn btn-primary btn-sm">Click Me</button>
+        {% comment %} <canvas id="myChart" width="400" height="200"></canvas> {% endcomment %}
+        {% comment %} <canvas id="myChart"></canvas> {% endcomment %}
+
+        <script type="text/javascript" src="{% static 'src/js/bootstrap.bundle.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'src/js/jquery-3.7.1.slim.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'src/js/sweetalert2@11.js' %}"></script>
+        <script type="text/javascript" src="{% static 'src/js/chart.js' %}"></script>
+
+        {% comment %} Sample Chart {% endcomment %}
+        <script>
+            $(document).ready(()=>{
+                $('#myButton').click(()=>{
+                    Swal.fire({
+                        title: 'Hello World',
+                        text: 'This is a SweetAlert2 alert!',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    });
+                });
+            })
+            
+        </script>
+    </body>
+</html>
